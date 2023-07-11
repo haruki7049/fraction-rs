@@ -1,13 +1,15 @@
+#[derive(Debug)]
+#[allow(dead_code)]
 pub struct Fraction {
-    denominator: u32,
-    numerator: i32,
+    pub denominator: u32,
+    pub numerator: i32,
 }
 
-impl Fraction {
-    fn new(d: u32, n: i32) -> Fraction {
+impl Default for Fraction {
+    fn default() -> Fraction {
         Fraction {
-            denominator: d,
-            numerator: n,
+            denominator: 1,
+            numerator: 1,
         }
     }
 }
